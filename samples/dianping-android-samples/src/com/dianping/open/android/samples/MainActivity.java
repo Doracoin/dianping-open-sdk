@@ -70,8 +70,11 @@ public class MainActivity extends Activity
             paramMap.put("keyword", "̩泰国菜");
             paramMap.put("sort", "7");
             paramMap.put("format", "json");
+            
+            Map<String, String> testMap=new HashMap<String, String>();
+            testMap.put("city", "北京");
 
-            String requestResult = DemoApiTool.requestApi(apiUrl, appKey, secret, paramMap);
+            String requestResult = DemoApiTool.requestApi(apiUrl, appKey, secret, testMap);
             text.setText(requestResult);
         }
     }
